@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <title>典藏</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/easyui/themes/icon.css">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/easyui/jquery.easyui.min.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">-->
+    <!--<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>-->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">/*导航栏样式*/
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        position: relative;
+        font-size: 16px;
+        font-family: "微软雅黑";
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    .header-nav{
+        background: #c7c5c8; /*导航背景颜色*/
+    }
+    /*导航文字居中*/
+    .contain{
+        position: relative;
+        width: 1010px;
+        margin: 0 auto;
+    }
+    .trig{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        left: 45px;
+        border-bottom: 6px solid #91868d;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+    /*二级导航样式*/
+    .second-bg{
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background: #847980;
+        z-index: 1;
+    }
+    .nav-list{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        z-index: 2;
+    }
+    /*一级导航样式*/
+    .nav-list>li{
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        /*border-right: 1px solid #e4e4e4;*/
+    }
+    /*一级导航文字样式*/
+    .nav-list>li>a{
+        color: #fff;
+        display: block;
+        position: relative;
+    }
+
+    .nav-list>li ul{
+        position: absolute;
+        width: 100px;
+        display: none;
+        z-index: 666;
+    }
+    /*二级导航文字样式*/
+    .nav-list>li ul li{
+        float: left;
+        height: 40px;
+        font-size: 15px;
+        line-height: 40px;
+        margin: 0 2px;
+        width: 100px;
+    }
+    /*一级导航文字鼠标滑过成白色*/
+    .nav-list>li a:hover{
+        color: #6c7f91;
+    }
+    /*二级导航文字鼠标滑过成白色*/
+    .nav-list>li ul li a:hover{
+        color: #ffffff;
+    }
+
+    .bottom-contain{
+        display:block;
+        position: relative;
+        width: 1500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .bottom-img{
+        text-align:center;
+    }
+
+
+    .bottom-list>li{
+        position: relative;
+        float: left;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        font-size: 14px;
+        display: block;
+        line-height: 26px;
+        /*line-height: 40px;*/
+        /*border-right: 1px solid #e4e4e4;*/
+    }
+
+    </style>
+    <script src="__PUBLIC__/js/navigation.js"></script>
+    <script src="__PUBLIC__/js/bootstrap/js/bootstrap.js"></script>
+
+    <style type="text/css">
+
+        .fangkuang img{
+            width:70%;
+            height: 30%;
+            position: center;
+            margin-left: 15%;
+
+        }
+
+        .biaoti img{
+            position: absolute;
+            height: 27%;
+            width: 30%;
+            top: 45%;
+            margin-left:50%;
+        }
+
+        .tupian img{
+            width:21%;
+            height: 47%;
+            display: block;
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            /*margin:0 auto*/
+            opacity:0.8;
+            filter:alpha(opacity=80);
+
+        }
+
+        .tupian img:hover{
+            opacity:1.0;
+            filter:alpha(opacity=100);
+        }
+
+        .classify {
+            display: block;
+            margin-left: 13%;
+            margin-top: 2%;
+        }
+
+        .huawen{
+            -webkit-animation:rotateImg 1s linear infinite;
+            width: 350px ;
+            height: 350px;
+            /*border: 1px solid #ccc;*/
+            vertical-align: middle;
+            position: absolute;
+            top: 240%;
+            right: 58%;
+            opacity:0.6;
+            filter:alpha(opacity=60);
+        }
+
+
+        @keyframes rotateImg {
+            0% {transform : rotate(0deg);}
+            100% {transform : rotate(360turn);}
+        }
+
+        .qinghuaci{
+            width:15%;
+            height: 80%;
+            position: absolute;
+            left: 22%;
+            top: 240%;
+
+        }
+
+        .zhengjibiaoti{
+            position: absolute;
+            height: 12%;
+            width: 15%;
+            top: 240%;
+           right: 40%;
+
+        }
+
+        /*.zhengjiwenzi p{*/
+            /*width: 500px;*/
+            /*font-size: 14px;*/
+            /*line-height: 24px;*/
+            /*font-family: "Microsoft YaHei";*/
+            /*color: #0a1f08;*/
+            /*word-wrap:break-word;*/
+            /*word-break:break-all;*/
+            /*!*overflow: hidden;*!*/
+            /*position: absolute;*/
+            /*right: 18%;*/
+            /*top: 300%;*/
+            /*!*clear: bottom;*!*/
+            /*display: block;*/
+        /*}*/
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+<!--导航栏-->
+<div class="header-nav">
+    <div class="contain">
+        <ul class="nav-list">
+            <!--<img src="../../../test/images/底部导航栏.png"  height="268px" width="1889px" >-->
+            <li>
+                <a href="#">首页<span class="trig"></span></a>
+            </li>
+            <li>
+                <a href="#">概况<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">桂博概况</a></li>
+                    <li><a href="#">大事记</a></li>
+                    <li><a href="#">机构设置</a></li>
+                    <li><a href="#">发展规划</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">咨询<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">新闻动态</a></li>
+                    <li><a href="#">媒体关注</a></li>
+                    <li><a href="#">党建工作</a></li>
+                    <li><a href="#">公告公示</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">展览<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">展览预告</a></li>
+                    <li><a href="#">常设展览</a></li>
+                    <li><a href="#">临时展览</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">活动<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">活动预告</a></li>
+                    <li><a href="#">活动预约</a></li>
+                    <li><a href="#">社教活动</a></li>
+                    <li><a href="#">讲解接待</a></li>
+                    <li><a href="#">志愿者之家</a></li>
+                    <li><a href="#">博物馆之友</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">典藏<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">精品赏析</a></li>
+                    <li><a href="#">藏品征集</a></li>
+                    <li><a href="#">保护与修复</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">学术<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">学术委员会</a></li>
+                    <li><a href="#">学术活动</a></li>
+                    <li><a href="#">科研课题</a></li>
+                    <li><a href="#">桂博出版</a></li>
+                    <li><a href="#">桂博讲坛</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">文创<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">桂博文具</a></li>
+                    <li><a href="#">创意生活</a></li>
+                    <li><a href="#">文物雅玩</a></li>
+                    <li><a href="#">家具陈设</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">服务<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">开放信息</a></li>
+                    <li><a href="#">参观须知</a></li>
+                    <li><a href="#">参观导览</a></li>
+                    <li><a href="#">位置周边</a></li>
+                    <li><a href="#">意见与建议</a></li>
+                    <li><a href="#">参观攻略</a></li>
+                </ul>
+            </li>
+    </div>
+    <div class="second-bg"></div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('.nav-list>li').hover(function(){
+            var $ul=$(this).find('ul');
+            var oW=$(this).width();//li
+            var otrigW=$(this).find('.trig').width();
+            var oNavListL=$('.nav-list').offset().left;
+            var oTL=$(this).offset().left-oNavListL;//距离最左边的距离
+            var oTR=$('.nav-list').width()-oTL-oW;//距离最右边的距离
+            console.log(oNavListL+":"+oTL);
+
+            if($ul.find('li').length>0){
+                $('.second-bg').show();
+                $(this).find('.trig').show();
+                $ul.show();
+                var sum=0;
+                var oLeft=0;
+                for(var i=0;i<$ul.find('li').length;i++){
+                    sum+=$ul.find('li').eq(i).width()+4;
+                }
+                $ul.width(sum);
+                oLeft=(sum-oW)/2;
+                if(oLeft>oTL){//到达左侧边界
+                    oLeft=oTL;
+                    $ul.css('left',-oLeft+'px');
+                    return ;
+                }
+                if(oLeft>oTR){
+                    $ul.css('right',-oTR+'px');
+                    return ;
+                }
+                $ul.css('left',-oLeft+'px');
+
+            }
+        },function(){
+            $('.second-bg').hide();
+            $(this).find('ul').hide();
+            $(this).find('.trig').hide();
+        });
+    });
+</script>
+
+<!--馆藏标题-->
+<div class="title">
+    <div class="fangkuang"><img src="__PUBLIC__/images/guangcangfangkuang.png" height="2200" width="6273"/></div>
+    <div class="biaoti"><img src="__PUBLIC__/images/guancangbiaoti.png" height="661" width="2235"/></div>
+</div>
+
+<!--馆藏分类-->
+
+<div class="classify">
+    <div class="tupian">
+        <div class="shuhua"><a href="{:url('collection/collection')}"><img src="__PUBLIC__/images/shuhua.png"/></a></div>
+        <div class="zaxiang"><a href="{:url('collection/collection')}"><img src="__PUBLIC__/images/zaxiang.png"/></a></div>
+        <div class="minsu"><a href="{:url('collection/collection')}"><img src="__PUBLIC__/images/minsu.png"/></a></div>
+        <div class="lipin"><a href="{:url('collection/collection')}"><img src="__PUBLIC__/images/lipin.png"/></a></div>
+</div>
+</div>
+
+<div class="cangpinzhengji">
+    <img class="huawen" src="__PUBLIC__/images/huawen.png"/>
+    <img class="qinghuaci" src="__PUBLIC__/images/qinghuaci.png" height="414" width="304"/>
+    <img class="zhengjibiaoti" src="__PUBLIC__/images/zhengjibiaoti.png" height="264" width="1011"/>
+    <!--<p class="zhengjiwenzi">-->
+        <!--王城博物馆是以我校历史文化与旅游学院历年收集的文物标本为基础，-->
+        <!--依托王城丰富的历史文化，全面展示中国特别是岭南地区灿烂悠久的-->
+        <!--文明发展史，主要服务于本校教学科研，同时对校外公众常年开放。-->
+        <!--博物馆2012年开始建设，历经4年现在已经落成，王城博物馆现有三-->
+        <!--个常设展厅收藏文物精品展、王城教育文化史展、明式家具馆，面积-->
+        <!--约400平方米-->
+    <!--</p>-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--底层标签栏-->
+    <!--<div  style-->
+    <!--"width:1889px; height:268px; background:url(../../../test/images/底部导航栏.png);" class="bottom-contain" >-->
+    <!--<ul class="bottom-list">-->
+    <!--<li>-->
+    <!--<a href="#">概况<span class="trig"></span></a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">桂博概况</a></li>-->
+    <!--<li><a href="#">大事记</a></li>-->
+    <!--<li><a href="#">机构设置</a></li>-->
+    <!--<li><a href="#">发展规划</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#">咨询<span class="trig"></span></a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">新闻动态</a></li>-->
+    <!--<li><a href="#">媒体关注</a></li>-->
+    <!--<li><a href="#">党建工作</a></li>-->
+    <!--<li><a href="#">公告公示</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#">展览<span class="trig"></span></a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">展览预告</a></li>-->
+    <!--<li><a href="#">常设展览</a></li>-->
+    <!--<li><a href="#">临时展览</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#">活动<span class="trig"></span></a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">活动预告</a></li>-->
+    <!--<li><a href="#">活动预约</a></li>-->
+    <!--<li><a href="#">社教活动</a></li>-->
+    <!--<li><a href="#">讲解接待</a></li>-->
+    <!--<li><a href="#">志愿者之家</a></li>-->
+    <!--<li><a href="#">博物馆之友</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#">典藏<span class="trig"></span></a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">精品赏析</a></li>-->
+    <!--<li><a href="#">藏品征集</a></li>-->
+    <!--<li><a href="#">保护与修复</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#">学术<span class="trig"></span></a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">学术委员会</a></li>-->
+    <!--<li><a href="#">学术活动</a></li>-->
+    <!--<li><a href="#">科研课题</a></li>-->
+    <!--<li><a href="#">桂博出版</a></li>-->
+    <!--<li><a href="#">桂博讲坛</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#">文创<span class="trig"></span></a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">桂博文具</a></li>-->
+    <!--<li><a href="#">创意生活</a></li>-->
+    <!--<li><a href="#">文物雅玩</a></li>-->
+    <!--<li><a href="#">家具陈设</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#">服务<span class="trig"></span></a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">开放信息</a></li>-->
+    <!--<li><a href="#">参观须知</a></li>-->
+    <!--<li><a href="#">参观导览</a></li>-->
+    <!--<li><a href="#">位置周边</a></li>-->
+    <!--<li><a href="#">意见与建议</a></li>-->
+    <!--<li><a href="#">参观攻略</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+
+
+</body>
+</html>

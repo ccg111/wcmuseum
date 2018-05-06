@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <title>文章</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/easyui/themes/icon.css">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/easyui/jquery.easyui.min.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">-->
+    <!--<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>-->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">/*导航栏样式*/
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        position: relative;
+        font-size: 16px;
+        font-family: "微软雅黑";
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    .header-nav{
+        background: #c7c5c8; /*导航背景颜色*/
+    }
+    /*导航文字居中*/
+    .contain{
+        position: relative;
+        width: 1010px;
+        margin: 0 auto;
+    }
+    .trig{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        left: 45px;
+        border-bottom: 6px solid #91868d;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+    /*二级导航样式*/
+    .second-bg{
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background: #847980;
+        z-index: 1;
+    }
+    .nav-list{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        z-index: 2;
+    }
+    /*一级导航样式*/
+    .nav-list>li{
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        /*border-right: 1px solid #e4e4e4;*/
+    }
+    /*一级导航文字样式*/
+    .nav-list>li>a{
+        color: #fff;
+        display: block;
+        position: relative;
+    }
+
+    .nav-list>li ul{
+        position: absolute;
+        width: 100px;
+        display: none;
+        z-index: 666;
+    }
+    /*二级导航文字样式*/
+    .nav-list>li ul li{
+        float: left;
+        height: 40px;
+        font-size: 15px;
+        line-height: 40px;
+        margin: 0 2px;
+        width: 100px;
+    }
+    /*一级导航文字鼠标滑过成白色*/
+    .nav-list>li a:hover{
+        color: #6c7f91;
+    }
+    /*二级导航文字鼠标滑过成白色*/
+    .nav-list>li ul li a:hover{
+        color: #ffffff;
+    }
+
+    .bottom-contain{
+        display:block;
+        position: relative;
+        width: 1500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .bottom-img{
+        text-align:center;
+    }
+
+
+    .bottom-list>li{
+        position: relative;
+        float: left;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        font-size: 14px;
+        display: block;
+        line-height: 26px;
+        /*line-height: 40px;*/
+        /*border-right: 1px solid #e4e4e4;*/
+    }
+
+    </style>
+    <script src="__PUBLIC__/js/navigation.js"></script>
+    <script src="__PUBLIC__/js/bootstrap/js/bootstrap.js"></script>
+    <script src="__PUBLIC__/js/bootstrap/js/fade-in.js"></script>
+
+    <style type="text/css">
+
+       h1{
+           color: #636363;
+           /*top:1%;*/
+           /*align:center;*/
+       }
+
+        .spread{
+            /*top: 80px;*/
+        }
+
+        .text{
+            line-height: 30px;
+            position: absolute;
+            left: 12%;
+            right: 12%;
+            color: #767676;
+        }
+
+    </style>
+
+</head>
+
+    <body>
+
+    <!--导航栏-->
+    <div class="header-nav">
+        <div class="contain">
+            <ul class="nav-list">
+                <!--<img src="../../../test/images/底部导航栏.png"  height="268px" width="1889px" >-->
+                <li>
+                    <a href="#">首页<span class="trig"></span></a>
+                </li>
+                <li>
+                    <a href="#">概况<span class="trig"></span></a>
+                    <ul>
+                        <li><a href="#">桂博概况</a></li>
+                        <li><a href="#">大事记</a></li>
+                        <li><a href="#">机构设置</a></li>
+                        <li><a href="#">发展规划</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">咨询<span class="trig"></span></a>
+                    <ul>
+                        <li><a href="#">新闻动态</a></li>
+                        <li><a href="#">媒体关注</a></li>
+                        <li><a href="#">党建工作</a></li>
+                        <li><a href="#">公告公示</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">展览<span class="trig"></span></a>
+                    <ul>
+                        <li><a href="#">展览预告</a></li>
+                        <li><a href="#">常设展览</a></li>
+                        <li><a href="#">临时展览</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">活动<span class="trig"></span></a>
+                    <ul>
+                        <li><a href="#">活动预告</a></li>
+                        <li><a href="#">活动预约</a></li>
+                        <li><a href="#">社教活动</a></li>
+                        <li><a href="#">讲解接待</a></li>
+                        <li><a href="#">志愿者之家</a></li>
+                        <li><a href="#">博物馆之友</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">典藏<span class="trig"></span></a>
+                    <ul>
+                        <li><a href="#">精品赏析</a></li>
+                        <li><a href="#">藏品征集</a></li>
+                        <li><a href="#">保护与修复</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">学术<span class="trig"></span></a>
+                    <ul>
+                        <li><a href="#">学术委员会</a></li>
+                        <li><a href="#">学术活动</a></li>
+                        <li><a href="#">科研课题</a></li>
+                        <li><a href="#">桂博出版</a></li>
+                        <li><a href="#">桂博讲坛</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">文创<span class="trig"></span></a>
+                    <ul>
+                        <li><a href="#">桂博文具</a></li>
+                        <li><a href="#">创意生活</a></li>
+                        <li><a href="#">文物雅玩</a></li>
+                        <li><a href="#">家具陈设</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">服务<span class="trig"></span></a>
+                    <ul>
+                        <li><a href="#">开放信息</a></li>
+                        <li><a href="#">参观须知</a></li>
+                        <li><a href="#">参观导览</a></li>
+                        <li><a href="#">位置周边</a></li>
+                        <li><a href="#">意见与建议</a></li>
+                        <li><a href="#">参观攻略</a></li>
+                    </ul>
+                </li>
+        </div>
+        <div class="second-bg"></div>
+    </div>
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+
+    <!--面包屑导航-->
+    <div class="container">
+        <div class="row">
+            <div class="span6">
+                <ul class="breadcrumb">
+                    <li><a href="{:url('index/index')}">王府博物馆</a> <span class="divider">></span></li>
+                    <!--<li><a href="#">概况</a> <span class="divider">></span></li>-->
+                    <li><a href="#">{$cates.catename}</a> <span class="divider">></span></li>
+                    <li class="active">{$classes.classname}</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="title">
+            <h1 align="center">{$articles.title}</h1>
+            <div class="spread" align="center">
+                <span class="writor">发布时间：{$articles.time|date="Y-m-d",###}</span>&ensp;&ensp;&ensp;&ensp;
+                <span class="writor">编辑：王城博物馆</span>&ensp;&ensp;&ensp;&ensp;
+                <!--<span class="writor">标签：<a href='/jiehun/z97712.html'>聚餐</a></span>&ensp;&ensp;&ensp;&ensp;-->
+                <!--<span class="writor">热度：{$articles.click}-->
+                    <!--<script src="/jiehun/plus/count.php?view=yes&aid=156214&mid=55" type='text/javascript' language="javascript"></script>-->
+                <!--</span>-->
+            </div>
+
+            <div class="text">
+                <br>
+                    <!--1、根据市政府的统一安排，全方位运营好桂林博物馆新馆。根据市政府的统一安排，全方位运营好桂林博物馆新馆。-->
+                <!--根据市政府的统一安排，全方位运营好桂林博物馆新馆。根据市政府的统一安排，全方位运营好桂林博物馆新馆。-->
+                <!--根据市政府的统一安排，全方位运营好桂林博物馆新馆。根据市政府的统一安排，全方位运营好桂林博物馆新馆。-->
+                <!--根据市政府的统一安排，全方位运营好桂林博物馆新馆。根据市政府的统一安排，全方位运营好桂林博物馆新馆。-->
+                <!--根据市政府的统一安排，全方位运营好桂林博物馆新馆。根据市政府的统一安排，全方位运营好桂林博物馆新馆。-->
+                <!--根据市政府的统一安排，全方位运营好桂林博物馆新馆。根据市政府的统一安排，全方位运营好桂林博物馆新馆。</br>-->
+
+                    <!--2、完成区普查办分配的20家普查单位一普数据审核工作。完成区普查办分配的20家普查单位一普数据审核工作。</br>-->
+
+                    <!--3、继续对桂林十二县展开文物征集，征集量根据当时情况而定，并做好各类新入账文物的登记工作。-->
+                <!--继续对桂林十二县展开文物征集，征集量根据当时情况而定，并做好各类新入账文物的登记工作。-->
+                <!--继续对桂林十二县展开文物征集，征集量根据当时情况而定，并做好各类新入账文物的登记工作。-->
+                <!--继续对桂林十二县展开文物征集，征集量根据当时情况而定，并做好各类新入账文物的登记工作。-->
+                <!--继续对桂林十二县展开文物征集，征集量根据当时情况而定，并做好各类新入账文物的登记工作。</br>-->
+
+                    <!--4、充分发挥互联网 技术的先天优势，及时展开信息推广和馆内动态追踪，利用计算机和网络技术，建设好智慧博物馆。</br>-->
+
+                    <!--5、对新一批本馆的讲解员进行业务培训。</br>-->
+
+                    <!--6、积极落实自治区文化厅、桂林市人民政府在桂林博物馆新馆举办的全国“5.18”系列活动。</br>-->
+
+                    <!--7、继续开展文化惠民“流动博物馆”进校园、进社区、进乡镇活动。</br>-->
+
+                {$articles.content}
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    </body>
+</html>

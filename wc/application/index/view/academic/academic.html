@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <title>学术</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/easyui/themes/icon.css">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/easyui/jquery.easyui.min.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">-->
+    <!--<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>-->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">/*导航栏样式*/
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        position: relative;
+        font-size: 16px;
+        font-family: "微软雅黑";
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    .header-nav{
+        background: #c7c5c8; /*导航背景颜色*/
+    }
+    /*导航文字居中*/
+    .contain{
+        position: relative;
+        width: 1010px;
+        margin: 0 auto;
+    }
+    .trig{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        left: 45px;
+        border-bottom: 6px solid #91868d;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+    /*二级导航样式*/
+    .second-bg{
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background: #847980;
+        z-index: 1;
+    }
+    .nav-list{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        z-index: 2;
+    }
+    /*一级导航样式*/
+    .nav-list>li{
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        /*border-right: 1px solid #e4e4e4;*/
+    }
+    /*一级导航文字样式*/
+    .nav-list>li>a{
+        color: #fff;
+        display: block;
+        position: relative;
+    }
+
+    .nav-list>li ul{
+        position: absolute;
+        width: 100px;
+        display: none;
+        z-index: 666;
+    }
+    /*二级导航文字样式*/
+    .nav-list>li ul li{
+        float: left;
+        height: 40px;
+        font-size: 15px;
+        line-height: 40px;
+        margin: 0 2px;
+        width: 100px;
+    }
+    /*一级导航文字鼠标滑过成白色*/
+    .nav-list>li a:hover{
+        color: #6c7f91;
+    }
+    /*二级导航文字鼠标滑过成白色*/
+    .nav-list>li ul li a:hover{
+        color: #ffffff;
+    }
+
+    .bottom-contain{
+        display:block;
+        position: relative;
+        width: 1500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .bottom-img{
+        text-align:center;
+    }
+
+
+    .bottom-list>li{
+        position: relative;
+        float: left;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        font-size: 14px;
+        display: block;
+        line-height: 26px;
+        /*line-height: 40px;*/
+        /*border-right: 1px solid #e4e4e4;*/
+    }
+
+    </style>
+    <script src="__PUBLIC__/js/navigation.js"></script>
+    <script src="__PUBLIC__/js/bootstrap/js/bootstrap.js"></script>
+    <!--<meta name="description" content="Bootstrap breadcrumbs Example. Class breadcrumb and divide are used.">-->
+    <!--<link href="../../../test/js/bootstrap/css/bootstrap.css" rel="stylesheet">-->
+
+
+
+    <style type="text/css">
+
+.xueshudingtu{
+    float: left;
+    width: 70%;
+    height:800%;
+    margin-top:1% ;
+    margin-left: 15%;
+}
+
+        .wangfu{
+            position: absolute;
+            margin-top: 6%;
+            margin-left: 20%;
+            width:200px;
+            height:200px;
+            border-radius:200px;
+        }
+
+        .shuxian{
+            position: absolute;
+            margin-top: 7%;
+            margin-left: 39%;
+            height: 180px;
+            opacity:0.4;
+            filter:alpha(opacity=40);
+        }
+
+        .tushutupian{
+            /*position: absolute;*/
+            margin-top: 10%;
+            margin-left: 7%;
+            width:510px;
+            height:500px;
+        }
+
+        .chubantubiao{
+            position: absolute;
+            /*margin-top: 10%;*/
+            /*margin-left: 7%;*/
+            top: 55%;
+            left: 49%;
+            width:12%;
+            height:4%;
+        }
+
+        .shuming{
+            position: absolute;
+            top: 61%;
+            left: 49%;
+            font-size: 20px;
+            font-weight:bold;
+        }
+
+        .xiangqing{
+            position: absolute;
+            top: 65%;
+            left: 49%;
+            font-size: 15px;
+            line-height: 25px;
+            /*font-weight:bold;*/
+        }
+
+        .shumian{
+            position: absolute;
+            margin-top: 39%;
+            margin-left: 22%;
+            width:15%;
+            height:28%;
+        }
+
+        .news ul{
+            display: block;
+            position: absolute;
+            top: 10rem;
+            left: 50%;
+        }
+
+        .news ul li {
+            color: #ffffff;
+            display: block;
+            margin-top: 5px;
+        }
+
+        hr{
+            opacity:0.4;
+        }
+
+        .time{
+            display: block;
+            position: absolute;
+            /*top: 1rem;*/
+            /*left: 10%;*/
+            color: #ffffff;
+        }
+
+        .jiangtanbiaoti{
+            position: absolute;
+            width:12%;
+            height:4%;
+            top: 100%;
+            left: 15%;
+        }
+
+        .jiangtan{
+            display: block;
+            position: absolute;
+            top: 105%;
+            left: 15%;
+            line-height: 25px;
+            /*font-weight: bolder;*/
+        }
+
+        .title{
+            font-weight: bolder;
+            color: #1e4260;
+        }
+
+        /*.jiangtanrenwu{*/
+            /*position: absolute;*/
+            /*!*size: 50%;*!*/
+
+        /*}*/
+
+        .weiyuanhuibiaoti{
+            position: absolute;
+            width:12%;
+            height:4%;
+            top: 120%;
+            left: 15%;
+        }
+
+        .weiyuanhui{
+            display: block;
+            position: absolute;
+            top: 125%;
+            left: 15%;
+            line-height: 25px;
+            /*font-weight: bolder;*/
+        }
+
+        .black{
+            color: black;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<!--导航栏-->
+<div class="header-nav">
+    <div class="contain">
+        <ul class="nav-list">
+            <!--<img src="../../../test/images/底部导航栏.png"  height="268px" width="1889px" >-->
+            <li>
+                <a href="{:url('home/home')}">首页<span class="trig"></span></a>
+            </li>
+            <li>
+                <a href="{:url('introduce/introduce')}">概况<span class="trig"></span></a>
+                <ul>
+                    <li><a href="{:url('intrmuse/intrmuse')}">桂博概况</a></li>
+                    <li><a href="{:url('intrevent/intrevent')}">大事记</a></li>
+                    <li><a href="{:url('introrga/introrga')}">机构设置</a></li>
+                    <li><a href="{:url('intrdeve/intrdeve')}">发展规划</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="{:url('message/message')}">咨询<span class="trig"></span></a>
+                <ul>
+                    <li><a href="{:url('message/message')}">新闻动态</a></li>
+                    <li><a href="{:url('message/message')}">媒体关注</a></li>
+                    <li><a href="{:url('message/message')}">党建工作</a></li>
+                    <li><a href="{:url('message/message')}">公告公示</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">展览<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">展览预告</a></li>
+                    <li><a href="{:url('exhibper/exhibper')}">常设展览</a></li>
+                    <li><a href="{:url('exhibtemp/exhibtemp')}">临时展览</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">活动<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">活动预告</a></li>
+                    <li><a href="#">活动预约</a></li>
+                    <li><a href="#">社教活动</a></li>
+                    <li><a href="#">讲解接待</a></li>
+                    <li><a href="#">志愿者之家</a></li>
+                    <li><a href="#">博物馆之友</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">典藏<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">精品赏析</a></li>
+                    <li><a href="#">藏品征集</a></li>
+                    <li><a href="#">保护与修复</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="{:url('academic/academic')}">学术<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">学术委员会</a></li>
+                    <li><a href="#">学术活动</a></li>
+                    <li><a href="#">科研课题</a></li>
+                    <li><a href="#">桂博出版</a></li>
+                    <li><a href="#">桂博讲坛</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">文创<span class="trig"></span></a>
+                <ul>
+                    <li><a href="{:url('peripstat/peripstat')}">桂博文具</a></li>
+                    <li><a href="{:url('peripgood/peripgood')}">创意生活</a></li>
+                    <!--<li><a href="#">文物雅玩</a></li>-->
+                    <!--<li><a href="#">家具陈设</a></li>-->
+                </ul>
+            </li>
+            <li>
+                <a href="{:url('service/service')}">服务<span class="trig"></span></a>
+                <ul>
+                    <li><a href="{:url('service/service')}">开放信息</a></li>
+                    <li><a href="{:url('service/service')}">参观须知</a></li>
+                    <li><a href="{:url('service/service')}">参观导览</a></li>
+                    <li><a href="{:url('service/service')}">位置周边</a></li>
+                    <li><a href="{:url('service/service')}">意见与建议</a></li>
+                    <li><a href="{:url('service/service')}">参观攻略</a></li>
+                </ul>
+            </li>
+    </div>
+    <div class="second-bg"></div>
+</div>
+<script src="js/jquery.min.js"></script>
+
+
+<!--学术活动-->
+<div class="xueshuhuodong">
+    <img class="wangfu" src="__PUBLIC__/images/wangfu.jpg" height="439" width="640"/>
+    <img class="shuxian" src="__PUBLIC__/images/shuxian.png" height="965" width="2"/>
+    <img class="xueshudingtu" src="__PUBLIC__/images/xueshudingtu.png" height="2129" width="6198"/>
+    <div class="news">
+        <ul>
+            <!--<div class="time">-->
+                <!--<h3 class="md">11.08</h3>-->
+                <!--<a class="y">/2017</a></div>-->
+            <li>
+
+                <p>桂林博物馆参加2017"互联网+博物馆"培训活动</p>
+            </li>
+            <hr>
+            <li>
+                <p>桂林博物馆参加2017"互联网+博物馆"培训活动</p>
+            </li>
+            <hr>
+            <li>
+                <p>桂林博物馆参加2017"互联网+博物馆"培训活动</p>
+            </li>
+            <hr>
+            <li>
+                <p>桂林博物馆参加2017"互联网+博物馆"培训活动</p>
+            </li>
+        </ul>
+    </div>
+   </div>
+
+
+<!--博物馆出版-->
+<div class="bowuguanchuban">
+    <img class="shumian" src="__PUBLIC__/images/shumian.png" height="391" width="289"/>
+    <img class="chubantubiao" src="__PUBLIC__/images/chubanbiaoti.png" height="238" width="954"/>
+    <img class="tushutupian" src="__PUBLIC__/images/tushutupian.png"/>
+    <p class="shuming">桂林博物馆文集 第三辑</p>
+    <p class="xiangqing">
+        桂林博物馆　编<br />
+        广西师范大学出版社出版发行<br />
+        开本：787 mm ×1092 mm 　1/16<br />
+        印张：27.5 　 字数：534 千字<br />
+        图书详情：为了充分引领区域文化，弘扬区域精神，<br />
+        打造多元化交流的综合平台，我馆编辑出版了《桂林<br />
+        博物馆文集》（第三辑）
+    </p>
+</div>
+
+<!--博物馆讲坛-->
+<div class="bowuguanjiangtan">
+    <img class="jiangtanbiaoti" src="__PUBLIC__/images/jiangtan.png" height="238" width="954"/>
+    <!--<img class="jiangtanrenwu" src="__PUBLIC__/images/jiangtanrenwu.png" />-->
+    <div class=" jiangtan">
+        <h4 class="title">
+            “桂博讲坛”第二十八期《辽金西京地区文物概述》
+        </h4>
+        <p>
+            桂林博物馆引进的《西京印迹——大同辽金元文物展》正在展出，越来越多的学者和观众希望能更系统有深度地了解这些文物的文化内涵<br />
+            以及文物背后的故事。为此，桂林博物馆特邀大同市博物馆副馆长曹臣明，在桂林博物馆一楼多功能报告厅，举办了一场《辽金西京地区<br />
+            文物概述》的讲座，以飨大众<br />
+
+            <!--主办单位：桂林博物馆<br />-->
+        </p>
+    </div>
+</div>
+
+<!--<hr class="black">-->
+
+<!--学院委员会-->
+<div class="xueyuanweiyuanhui">
+    <img class="weiyuanhuibiaoti" src="__PUBLIC__/images/weiyuanhui.png" height="238" width="954"/>
+    <!--<img class="jiangtanrenwu" src="__PUBLIC__/images/jiangtanrenwu.png" />-->
+    <div class=" weiyuanhui">
+        <h4 class="title">
+            “桂博讲坛”第二十八期《辽金西京地区文物概述》
+        </h4>
+        <p>
+            桂林博物馆引进的《西京印迹——大同辽金元文物展》正在展出，越来越多的学者和观众希望能更系统有深度地了解这些文物的文化内涵<br />
+            以及文物背后的故事。为此，桂林博物馆特邀大同市博物馆副馆长曹臣明，在桂林博物馆一楼多功能报告厅，举办了一场《辽金西京地区<br />
+            文物概述》的讲座，以飨大众<br />
+
+            <!--主办单位：桂林博物馆<br />-->
+        </p>
+    </div>
+</div>
+
+
+
+
+<!--底层标签栏-->
+<!--<div  style-->
+<!--"width:1889px; height:268px; background:url(../../../test/images/底部导航栏.png);" class="bottom-contain" >-->
+<!--<ul class="bottom-list">-->
+<!--<li>-->
+<!--<a href="#">概况<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">桂博概况</a></li>-->
+<!--<li><a href="#">大事记</a></li>-->
+<!--<li><a href="#">机构设置</a></li>-->
+<!--<li><a href="#">发展规划</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">咨询<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">新闻动态</a></li>-->
+<!--<li><a href="#">媒体关注</a></li>-->
+<!--<li><a href="#">党建工作</a></li>-->
+<!--<li><a href="#">公告公示</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">展览<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">展览预告</a></li>-->
+<!--<li><a href="#">常设展览</a></li>-->
+<!--<li><a href="#">临时展览</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">活动<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">活动预告</a></li>-->
+<!--<li><a href="#">活动预约</a></li>-->
+<!--<li><a href="#">社教活动</a></li>-->
+<!--<li><a href="#">讲解接待</a></li>-->
+<!--<li><a href="#">志愿者之家</a></li>-->
+<!--<li><a href="#">博物馆之友</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">典藏<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">精品赏析</a></li>-->
+<!--<li><a href="#">藏品征集</a></li>-->
+<!--<li><a href="#">保护与修复</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">学术<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">学术委员会</a></li>-->
+<!--<li><a href="#">学术活动</a></li>-->
+<!--<li><a href="#">科研课题</a></li>-->
+<!--<li><a href="#">桂博出版</a></li>-->
+<!--<li><a href="#">桂博讲坛</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">文创<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">桂博文具</a></li>-->
+<!--<li><a href="#">创意生活</a></li>-->
+<!--<li><a href="#">文物雅玩</a></li>-->
+<!--<li><a href="#">家具陈设</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">服务<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">开放信息</a></li>-->
+<!--<li><a href="#">参观须知</a></li>-->
+<!--<li><a href="#">参观导览</a></li>-->
+<!--<li><a href="#">位置周边</a></li>-->
+<!--<li><a href="#">意见与建议</a></li>-->
+<!--<li><a href="#">参观攻略</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+
+
+</body>
+</html>

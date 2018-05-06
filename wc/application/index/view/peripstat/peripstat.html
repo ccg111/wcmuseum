@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <title>文创-博物馆文具</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/easyui/themes/icon.css">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/easyui/jquery.easyui.min.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">-->
+    <!--<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>-->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">/*导航栏样式*/
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        position: relative;
+        font-size: 16px;
+        font-family: "微软雅黑";
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    .header-nav{
+        background: #c7c5c8; /*导航背景颜色*/
+    }
+    /*导航文字居中*/
+    .contain{
+        position: relative;
+        width: 1010px;
+        margin: 0 auto;
+    }
+    .trig{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        left: 45px;
+        border-bottom: 6px solid #91868d;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+    /*二级导航样式*/
+    .second-bg{
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background: #847980;
+        z-index: 1;
+    }
+    .nav-list{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        z-index: 2;
+    }
+    /*一级导航样式*/
+    .nav-list>li{
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        /*border-right: 1px solid #e4e4e4;*/
+    }
+    /*一级导航文字样式*/
+    .nav-list>li>a{
+        color: #fff;
+        display: block;
+        position: relative;
+    }
+
+    .nav-list>li ul{
+        position: absolute;
+        width: 100px;
+        display: none;
+        z-index: 666;
+    }
+    /*二级导航文字样式*/
+    .nav-list>li ul li{
+        float: left;
+        height: 40px;
+        font-size: 15px;
+        line-height: 40px;
+        margin: 0 2px;
+        width: 100px;
+    }
+    /*一级导航文字鼠标滑过成白色*/
+    .nav-list>li a:hover{
+        color: #6c7f91;
+    }
+    /*二级导航文字鼠标滑过成白色*/
+    .nav-list>li ul li a:hover{
+        color: #ffffff;
+    }
+
+    .bottom-contain{
+        display:block;
+        position: relative;
+        width: 1500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .bottom-img{
+        text-align:center;
+    }
+
+
+    .bottom-list>li{
+        position: relative;
+        float: left;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        font-size: 14px;
+        display: block;
+        line-height: 26px;
+        /*line-height: 40px;*/
+        /*border-right: 1px solid #e4e4e4;*/
+    }
+
+    </style>
+    <script src="__PUBLIC__/js/navigation.js"></script>
+    <script src="__PUBLIC__/js/bootstrap/js/bootstrap.js"></script>
+    <!--<meta name="description" content="Bootstrap breadcrumbs Example. Class breadcrumb and divide are used.">-->
+    <!--<link href="../../../test/js/bootstrap/css/bootstrap.css" rel="stylesheet">-->
+
+
+
+    <style type="text/css">
+
+
+
+        /*.img{*/
+        /*top: 50%;*/
+        /*margin-top: 10px;*/
+        /*width: 400px;*/
+        /*height: 350px;*/
+        /*}*/
+
+        .text{
+            top: 80%;
+            padding: 15px;
+            font-size: 17px;
+        }
+
+        .exhibitionlist li{
+            display: block;
+            text-align: center;
+            /*padding: 20px;*/
+            /*margin-top: 14rem;*/
+            margin-bottom: 14rem;
+            margin-left: 3rem;
+            float: left;
+            transition: all ease-in 0.3s;
+        }
+
+        .exhibitionlist li:hover{
+            background: #ffffff;
+            box-shadow: 0 10px 10px rgba(136, 136, 136, 0.25), 0 5px 10px rgba(161, 161, 161, 0.22);
+            transform:translateY(-3px);
+            transition: all ease-out 0.3s;
+        }
+
+        /*.exhibitionlist li img:hover{*/
+            /*transform: scale(1.1, 1.1);*/
+            /*transition: all ease-out 0.3s;*/
+
+        /*}*/
+
+        .exhibition{
+            display: block;
+            margin-top: 10%;
+            margin-left: 3%;
+            /*left: -50%;*/
+        }
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+<!--导航栏-->
+<div class="header-nav">
+    <div class="contain">
+        <ul class="nav-list">
+            <!--<img src="../../../test/images/底部导航栏.png"  height="268px" width="1889px" >-->
+            <li>
+                <a href="#">首页<span class="trig"></span></a>
+            </li>
+            <li>
+                <a href="#">概况<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">桂博概况</a></li>
+                    <li><a href="#">大事记</a></li>
+                    <li><a href="#">机构设置</a></li>
+                    <li><a href="#">发展规划</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">咨询<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">新闻动态</a></li>
+                    <li><a href="#">媒体关注</a></li>
+                    <li><a href="#">党建工作</a></li>
+                    <li><a href="#">公告公示</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">展览<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">展览预告</a></li>
+                    <li><a href="#">常设展览</a></li>
+                    <li><a href="#">临时展览</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">活动<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">活动预告</a></li>
+                    <li><a href="#">活动预约</a></li>
+                    <li><a href="#">社教活动</a></li>
+                    <li><a href="#">讲解接待</a></li>
+                    <li><a href="#">志愿者之家</a></li>
+                    <li><a href="#">博物馆之友</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">典藏<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">精品赏析</a></li>
+                    <li><a href="#">藏品征集</a></li>
+                    <li><a href="#">保护与修复</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">学术<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">学术委员会</a></li>
+                    <li><a href="#">学术活动</a></li>
+                    <li><a href="#">科研课题</a></li>
+                    <li><a href="#">桂博出版</a></li>
+                    <li><a href="#">桂博讲坛</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">文创<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">桂博文具</a></li>
+                    <li><a href="#">创意生活</a></li>
+                    <li><a href="#">文物雅玩</a></li>
+                    <li><a href="#">家具陈设</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">服务<span class="trig"></span></a>
+                <ul>
+                    <li><a href="#">开放信息</a></li>
+                    <li><a href="#">参观须知</a></li>
+                    <li><a href="#">参观导览</a></li>
+                    <li><a href="#">位置周边</a></li>
+                    <li><a href="#">意见与建议</a></li>
+                    <li><a href="#">参观攻略</a></li>
+                </ul>
+            </li>
+    </div>
+    <div class="second-bg"></div>
+</div>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+
+<!--面包屑导航栏-->
+<div class="container">
+    <div class="row">
+        <div class="span6">
+            <ul class="breadcrumb">
+                <li><a href="#">桂林博物馆</a> <span class="divider">></span></li>
+                <li><a href="#">文创</a> <span class="divider">></span></li>
+                <li class="active">博物馆文具</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="exhibition">
+    <ul class="exhibitionlist">
+        <li>
+            <div class="img"> <img src="__PUBLIC__/images/wenjutaozhuang.png" style="top: 50%;margin-top: -135px;
+width: 270px;height: 270px"/></div>
+            <p class="text">
+                四爱图纹•笔记本套装
+            </p>
+
+        </li>
+        <li>
+            <div class="img"> <img src="__PUBLIC__/images/wenjutaozhuang.png" style="top: 50%;margin-top: -135px;
+width: 270px;height: 270px"/></div>
+            <p class="text">
+                四爱图纹•笔记本套装
+            </p>
+
+        </li>
+
+        <li>
+            <div class="img"> <img src="__PUBLIC__/images/wenjutaozhuang.png" style="top: 50%;margin-top: -135px;
+width: 270px;height: 270px"/></div>
+            <p class="text">
+                四爱图纹•笔记本套装
+            </p>
+
+        </li>
+
+        <li>
+            <div class="img"> <img src="__PUBLIC__/images/wenjutaozhuang.png" style="top: 50%;margin-top: -135px;
+width: 270px;height: 270px"/></div>
+            <p class="text">
+                四爱图纹•笔记本套装
+            </p>
+
+        </li>
+
+        <li>
+            <div class="img"> <img src="__PUBLIC__/images/wenjutaozhuang.png" style="top: 50%;margin-top: -135px;
+width: 270px;height: 270px"/></div>
+            <p class="text">
+                四爱图纹•笔记本套装
+            </p>
+
+        </li>
+        <!--<li>-->
+            <!--<div class="img"> <img src="../../../test/images/wenjutaozhuang.png" style="top: 50%;margin-top: -135px;-->
+<!--width: 270px;height: 270px/></div>-->
+            <!--<p class="text">-->
+                <!--靖江遗韵&#45;&#45;桂林出土明代梅瓶陈列（基本陈列）-->
+            <!--</p>-->
+
+        <!--</li>-->
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--底层标签栏-->
+<!--<div  style-->
+<!--"width:1889px; height:268px; background:url(../../../test/images/底部导航栏.png);" class="bottom-contain" >-->
+<!--<ul class="bottom-list">-->
+<!--<li>-->
+<!--<a href="#">概况<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">桂博概况</a></li>-->
+<!--<li><a href="#">大事记</a></li>-->
+<!--<li><a href="#">机构设置</a></li>-->
+<!--<li><a href="#">发展规划</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">咨询<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">新闻动态</a></li>-->
+<!--<li><a href="#">媒体关注</a></li>-->
+<!--<li><a href="#">党建工作</a></li>-->
+<!--<li><a href="#">公告公示</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">展览<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">展览预告</a></li>-->
+<!--<li><a href="#">常设展览</a></li>-->
+<!--<li><a href="#">临时展览</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">活动<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">活动预告</a></li>-->
+<!--<li><a href="#">活动预约</a></li>-->
+<!--<li><a href="#">社教活动</a></li>-->
+<!--<li><a href="#">讲解接待</a></li>-->
+<!--<li><a href="#">志愿者之家</a></li>-->
+<!--<li><a href="#">博物馆之友</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">典藏<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">精品赏析</a></li>-->
+<!--<li><a href="#">藏品征集</a></li>-->
+<!--<li><a href="#">保护与修复</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">学术<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">学术委员会</a></li>-->
+<!--<li><a href="#">学术活动</a></li>-->
+<!--<li><a href="#">科研课题</a></li>-->
+<!--<li><a href="#">桂博出版</a></li>-->
+<!--<li><a href="#">桂博讲坛</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">文创<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">桂博文具</a></li>-->
+<!--<li><a href="#">创意生活</a></li>-->
+<!--<li><a href="#">文物雅玩</a></li>-->
+<!--<li><a href="#">家具陈设</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">服务<span class="trig"></span></a>-->
+<!--<ul>-->
+<!--<li><a href="#">开放信息</a></li>-->
+<!--<li><a href="#">参观须知</a></li>-->
+<!--<li><a href="#">参观导览</a></li>-->
+<!--<li><a href="#">位置周边</a></li>-->
+<!--<li><a href="#">意见与建议</a></li>-->
+<!--<li><a href="#">参观攻略</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+
+
+</body>
+</html>

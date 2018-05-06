@@ -1,0 +1,305 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head lang="en">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>show</title>-->
+    <!--<script src="__PUBLIC__/js/three/three.js"></script>-->
+    <!--<script src="__PUBLIC__/js/three/three.min.js"></script>-->
+    <!--&lt;!&ndash;<script src="__PUBLIC__/js/three/three.min.js"></script>&ndash;&gt;-->
+    <!--<script src="__PUBLIC__/js/three/OBJLoader.js"></script>-->
+
+<!--</head>-->
+
+<!--<style type="text/css">-->
+
+    <!--html, body {-->
+        <!--margin: 0;-->
+        <!--padding: 0;-->
+    <!--}-->
+
+    <!--#three_canvas {-->
+        <!--position: absolute;-->
+        <!--width: 100%;-->
+        <!--height: 100%;-->
+    <!--}-->
+
+
+
+<!--</style>-->
+
+<!--<body>-->
+<!--&lt;!&ndash;<div id="container"></div>&ndash;&gt;-->
+<!--<canvas id="three_canvas"></canvas>-->
+
+<!--<div>-->
+
+<!--</div>-->
+
+<!--<script>-->
+
+    <!--// // 立方体-->
+    <!--// var scene, camera, renderer;-->
+    <!--// scene = new THREE.Scene();-->
+    <!--// camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight);-->
+    <!--//-->
+    <!--// camera.position.set(3,4,5);-->
+    <!--// camera.lookAt(new THREE.Vector3(0,0,0));-->
+    <!--//-->
+    <!--// scene.add(camera);-->
+    <!--//-->
+    <!--// var geometry = new THREE.BoxGeometry(1,1,1);   //创建边长为1的立方体;-->
+    <!--// var material = new THREE.MeshNormalMaterial(); //创建一种法向材质;-->
+    <!--// var cube = new THREE.Mesh(geometry, material); //将材质赋予给立方体;-->
+    <!--//-->
+    <!--// scene.add(cube);-->
+    <!--//-->
+    <!--// renderer = new THREE.WebGLRenderer({ alpha: true });-->
+    <!--// renderer.setSize(window.innerWidth, window.innerHeight);-->
+    <!--// document.body.appendChild(renderer.domElement);-->
+    <!--//-->
+    <!--// // renderer.render(scene, camera);-->
+    <!--//-->
+    <!--// function render() {-->
+    <!--//     requestAnimationFrame(render);-->
+    <!--//-->
+    <!--//     cube.rotation.x += 0.01;-->
+    <!--//     cube.rotation.y += 0.01;-->
+    <!--//-->
+    <!--//     renderer.render(scene, camera);-->
+    <!--// }-->
+    <!--// render();-->
+
+
+    <!--// document.onmousemove = function(e) {-->
+    <!--//     console.log("X: " + e.x + ", Y: " + e.y);-->
+    <!--// };-->
+
+
+    <!--// var scene = new THREE.Scene();-->
+    <!--// var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );-->
+    <!--//-->
+    <!--// var renderer = new THREE.WebGLRenderer();-->
+    <!--// renderer.setSize( window.innerWidth, window.innerHeight );-->
+    <!--// document.body.appendChild( renderer.domElement );-->
+    <!--//-->
+    <!--// var geometry = new THREE.BoxGeometry( 1, 1, 1 );-->
+    <!--// var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );-->
+    <!--// var cube = new THREE.Mesh( geometry, material );-->
+    <!--// scene.add( cube );-->
+    <!--//-->
+    <!--// camera.position.z = 5;-->
+    <!--//-->
+    <!--// var render = function () {-->
+    <!--//     requestAnimationFrame( render );-->
+    <!--//-->
+    <!--//     cube.rotation.x += 0.1;-->
+    <!--//     cube.rotation.y += 0.1;-->
+    <!--//-->
+    <!--//     renderer.render(scene, camera);-->
+    <!--// };-->
+    <!--//-->
+    <!--// render();-->
+
+    <!--container = document.createElement('div');-->
+    <!--document.body.appendChild( container )-->
+
+    <!--camera =new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight,1, 2000 );-->
+    <!--camera.position.z = initalCameraZElem.value;-->
+    <!--camera.position.x = initalCameraXElem.value;-->
+    <!--camera.position.y = initalCameraYElem.value;-->
+
+    <!--scene = new THREE.Scene();-->
+
+    <!--varambient = new THREE.AmbientLight( 0x101030);-->
+    <!--scene.add( ambient );-->
+
+    <!--vardirectionalLight = new THREE.DirectionalLight( 0xffeedd );-->
+    <!--directionalLight.position.set(0, 0, 1 ).normalize();-->
+    <!--scene.add( directionalLight );-->
+
+    <!--vartexture = new THREE.Texture();-->
+
+    <!--varloader = new THREE.ImageLoader();-->
+    <!--loader.addEventListener('load', function ( event ) {-->
+
+        <!--texture.image = event.content;-->
+        <!--texture.needsUpdate =true;-->
+
+    <!--} );-->
+    <!--loader.load('small.jpg' );-->
+
+    <!--varloader = new THREE.OBJLoader();-->
+    <!--loader.addEventListener('load', function ( event ) {-->
+
+        <!--varobject = event.content;-->
+        <!--_object = object;-->
+        <!--console.log(object);-->
+        <!--for( var i = 0, l = object.children.length; i < l; i ++ ) {-->
+
+            <!--//object.children[ i].material.map = texture;-->
+
+        <!--}-->
+        <!--object.position.y = initalYElem.value;-->
+        <!--object.position.x = initalXElem.value;-->
+        <!--object.position.z = initalZElem.value;-->
+        <!--scene.add( object );-->
+    <!--});-->
+    <!--loader.load("__PUBLIC__/images/fuo/fuo.obj" );//path为模型的路径-->
+
+    <!--renderer =new THREE.WebGLRenderer();-->
+    <!--renderer.setSize( window.innerWidth , window.innerHeight);-->
+    <!--container.appendChild( renderer.domElement );-->
+
+<!--</script>-->
+
+<!--</body>-->
+
+
+<!--</html>-->
+
+
+
+<!--<html>-->
+
+
+
+
+<!DOCTYPE html>
+
+<?php
+header("Access-Control-Allow-Origin: http://127.0.0.1");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+?>
+
+
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="127.0.0.1">
+    <title>show</title>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/three/three.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/three/TrackballControls.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/three/DDSLoader.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/three/OBJLoader.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/three/OBJMTLLoader.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                url:'http://www.127.0.0.1',
+                success:function(msg){
+                    alert(msg);
+                }
+            })
+        });
+    </script>
+
+
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        #percent {
+            position: absolute;
+            width: 200px;
+            height: 20px;
+            color: red;
+            text-align: center;
+            border: 1px;
+        }
+    </style></head>
+
+<body>
+<div id="percent">100% 已经加载</div>
+<div id="WebGL-output">
+    <canvas width="1365" height="694" style="width: 1365px; height: 694px;"></canvas></div>
+<script>
+    $(function(){
+        //直接开启帧数检测
+        //编辑代码处
+        var scene = new THREE.Scene();//场景构建
+        var camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,0.1,1000);//相机构建
+        var renderer = new THREE.WebGLRenderer();//渲染器构建
+        renderer.setClearColor(0xEEEEEE);
+        renderer.setSize(window.innerWidth,window.innerHeight);
+        renderer.shadowMapEnabled = true;//激活阴影
+        //构建一个坐标轴
+        var axes = new THREE.AxisHelper(20);
+        scene.add(axes);
+        //创建控件并绑定在相机上
+        trackballControls = new THREE.TrackballControls(camera);
+        trackballControls.rotateSpeed = 1.0;
+        trackballControls.zoomSpeed = 1.0;
+        trackballControls.panSpeed = 1.0;
+        trackballControls.noZoom=false;
+        trackballControls.noPan=false;
+        trackballControls.staticMoving = true;
+        trackballControls.dynamicDampingFactor = 0.3;
+        var planeGeometry = new THREE.PlaneGeometry(40,20);
+        //var planeMaterial = new THREE.MeshBasicMaterial({color:0xcccccc});
+        var planeMaterial = new THREE.MeshLambertMaterial({color:0xffffff});//转换对光源有渲染的材质
+        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+        plane.rotation.x = -0.5*Math.PI;
+        plane.position.x = 15;
+        plane.position.y = 0;
+        plane.position.x = 0;
+        scene.add(plane);
+        plane.receiveShadow  = true;
+        //添加材质灯光阴影
+        var spotLight = new THREE.SpotLight(0xffffff);
+        spotLight.position.set(-10,20,10);
+        spotLight.castShadow = true;
+        scene.add(spotLight);
+
+        // model
+        var onProgress = function(xhr) {
+            if (xhr.lengthComputable) {
+                var percentComplete = xhr.loaded / xhr.total * 100;
+                var percent = document.getElementById("percent");
+                percent.innerText = Math.round(percentComplete, 2) + '% 已经加载';
+            }
+        };
+        var onError = function(xhr) {};
+        var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setPath('__PUBLIC__/images/fuo/');
+        mtlLoader.load('fuo.mtl', function(materials) {
+
+            materials.preload();
+
+            var objLoader = new THREE.OBJLoader();
+            objLoader.setMaterials(materials);
+            objLoader.setPath('__PUBLIC__/images/fuo/');
+            objLoader.load('fuo.obj', function(object) {
+
+                object.position.y = 0;
+                object.rotation.y = 0.5;
+                object.scale.set(0.05, 0.05, 0.05);
+                scene.add(object);
+
+            }, onProgress, onError);
+        });
+        //渲染视图视角
+        camera.position.x = -30;
+        camera.position.y = 20;
+        camera.position.z = 30;
+        camera.lookAt(scene.position)
+        $("#WebGL-output").append(renderer.domElement)
+        renderScene();
+        function renderScene(){
+            var clock = new THREE.Clock();
+            var delta = clock.getDelta();
+            trackballControls.update(delta);
+            requestAnimationFrame(renderScene);
+            renderer.render(scene,camera);
+        }
+
+    })
+</script>
+
+
+
+</body></html>
